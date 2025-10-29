@@ -4,7 +4,7 @@ import spacy
 nlp = spacy.load("en_core_web_sm")
 
 
-text = "A student has a name and ID."
+text = input("Enter your requirement description: ")
 
 
 doc = nlp(text)
@@ -34,4 +34,5 @@ for sent in doc.sents:
 
         entities[entity] = clean_attrs
 
-print(entities)
+print("Extracted entities and attributes:", entities)
+
